@@ -1,0 +1,69 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-rational-order"
+	],
+	"plugins": [
+		"stylelint-order",
+		"stylelint-config-rational-order/plugin"
+	],
+	"rules": {
+		"at-rule-no-vendor-prefix": true,
+		"selector-no-vendor-prefix": true,
+		"property-no-vendor-prefix": true,
+		"value-no-vendor-prefix": true,
+		"color-hex-case": "lower",
+		"color-hex-length": "short",
+		"color-named": "always-where-possible",
+		"indentation": "tab",
+		"length-zero-no-unit": true,
+		"value-keyword-case": null,
+		"value-list-comma-newline-after": null,
+		"max-line-length": null,
+		"no-eol-whitespace": [true, { "ignore": ["empty-lines"] }],
+		"no-descending-specificity": null,
+		"function-url-quotes": "always",
+		"string-quotes": "double",
+		"block-opening-brace-space-before": "always",
+		"block-closing-brace-empty-line-before": "never",
+		"import-notation": null,
+		"at-rule-no-unknown": null,
+		"function-no-unknown": null,
+		"declaration-empty-line-before": null,
+		"custom-property-empty-line-before": null,
+		"selector-pseudo-class-no-unknown": [true, {
+			"ignorePseudoClasses": ["deep", "global", "export", "vertical", "horizontal", "decrement", "increment", "component", "comp"]
+		}],
+		"declaration-block-no-duplicate-properties": true,
+		"declaration-block-no-duplicate-custom-properties": true,
+		"font-family-no-duplicate-names": true,
+		"keyframe-block-no-duplicate-selectors": true,
+		"custom-property-no-missing-var-function": true,
+		"keyframe-declaration-no-important": true,
+		"font-family-no-missing-generic-family-keyword": true,
+		"font-family-name-quotes": "always-where-recommended",
+		"comment-empty-line-before": null,
+		"at-rule-empty-line-before": ["always", {
+			"except": ["first-nested"],
+			"ignore": ["after-comment"],
+			"ignoreAtRules": ["import", "include", "else", "return", "forward", "use"]
+		}],
+		"unit-disallowed-list": [
+			"vw", "vh", "vmin", "vmax",
+			"cm", "mm", "Q", "in", "pc", "pt", "mozmm"
+		],
+		"order/order": [
+			{
+				"type": "at-rule",
+				"name": "include",
+				"hasBlock": false
+			},
+			"dollar-variables",
+			"custom-properties",
+			"declarations",
+			"rules"
+		],
+		"order/properties-order": [[], { "severity": "warning" }]
+	}
+}
