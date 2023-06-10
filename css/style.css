@@ -3,17 +3,23 @@
 	transition: 0.25s ease-out;
 }
 
+::selection {
+	background-color: #ff3737;
+}
+
 body {
-	font-family: "Microsoft YaHei UI", sans-serif;
+	font-family: "Bahnschrift", "Microsoft YaHei UI", sans-serif;
 	margin: 0;
 	padding: 0;
 	position: relative;
+	background-color: #000;
+	color: #fff;
 }
 
 header {
 	display: flex;
-	gap: 16px;
 	align-items: center;
+	justify-content: space-between;
 	width: 100%;
 	height: 48px;
 	padding: 0 15%;
@@ -22,16 +28,19 @@ header {
 }
 
 header a {
-	color: rgba(255, 255, 255, 1);
-	text-decoration: none;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+header .menu a {
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
 	width: 100px;
 }
 
-header a:hover {
+header .menu a:hover {
 	color: rgba(255, 255, 255, 0.7);
 }
 
@@ -65,16 +74,20 @@ section:nth-child(1) .section-wrapper {
 section h1 {
 	font-size: 48px;
 	text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+	animation: slide-rtl 1s cubic-bezier(0, 0.57, 0.06, 1) 0.3s backwards;
+	letter-spacing: 0.05em;
 }
 
 section img {
 	width: 300px;
 	border-radius: 6px;
+	margin-top: 16px;
 }
 
 section p {
 	font-size: 14px;
 	text-shadow: 0 1px 4px #000;
+	animation: slide-rtl 1s cubic-bezier(0, 0.57, 0.06, 1) 0.5s backwards;
 }
 
 .section-wrapper {
@@ -82,7 +95,7 @@ section p {
 	height: 100%;
 	padding: 0 15%;
 	padding-top: 64px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 	backdrop-filter: blur(4px);
 }
 
