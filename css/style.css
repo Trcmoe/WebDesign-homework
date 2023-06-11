@@ -53,6 +53,11 @@ header .menu a.selected {
 .header-logo {
 	height: 60%;
 	flex-shrink: 0;
+	transition: all 1s cubic-bezier(0, 0.57, 0.06, 1);
+}
+
+.header-logo:hover {
+	transform: rotate(1turn);
 }
 
 .menu {
