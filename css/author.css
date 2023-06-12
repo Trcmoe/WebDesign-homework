@@ -37,7 +37,7 @@ section:nth-child(1) .nick-name {
 }
 
 section:nth-child(1) img {
-	animation: slide-btt 1s cubic-bezier(0, 0.57, 0.06, 1) 0.4s backwards;
+	animation: slide-rtl 1s cubic-bezier(0, 0.57, 0.06, 1) 0.4s backwards;
 }
 
 section img {
