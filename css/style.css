@@ -11,6 +11,7 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	background-size: 100%;
 	background-color: #000;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -85,15 +86,20 @@ header .menu a.selected::after {
 
 section {
 	display: flex;
-	align-items: center;
-	gap: 24px;
 	width: 100%;
-	position: sticky;
 	height: 100vh;
+	position: sticky;
 	top: 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: #fff;
+	padding: 0 15%;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(4px);
+}
+
+section:nth-child(1) {
+	backdrop-filter: none;
 }
 
 section p {
@@ -107,4 +113,18 @@ section h1, section h2 {
 
 section h2 {
 	margin-top: 0;
+}
+
+.right-img-margin {
+	margin-left: 24px;
+}
+
+.left-img-margin {
+	margin-right: 24px;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
